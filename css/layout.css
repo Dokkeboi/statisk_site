@@ -249,7 +249,8 @@ button {
     height: 100%;
   }
 
-  .product_card div {
+  .product_card div,
+  h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
