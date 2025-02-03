@@ -1,5 +1,5 @@
 const productliste = document.querySelector("#productlist");
-let url = `https://kea-alt-del.dk/t7/api/products`;
+let url = `https://kea-alt-del.dk/t7/api/products?limit=100`;
 
 function showProducts(data) {
   const markup = data
@@ -10,10 +10,9 @@ function showProducts(data) {
     <img src="${`https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`}">
     <div>
       <h3>${product.productdisplayname}</h3>
+      <p class="subtle">${product.articletype} | ${product.brandname}</p>
       <p>kr. <span>${product.price}</span>,-</p>
-      ${
-        product.discount ? `<p>rabat <span>${product.discount}</span>%</p>` : ""
-      }
+      ${product.discount ? `<p>rabat <span>${product.discount}</span>%</p>` : ""}
     </div>
   </article>
 </a>`
