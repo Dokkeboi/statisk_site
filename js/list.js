@@ -13,7 +13,7 @@ function showProducts(data) {
         <h3>${product.productdisplayname}</h3>
         <p class="subtle">${product.articletype} | ${product.brandname}</p>
         <p class="price">DKK ${product.price},-</p>
-        ${product.discount ? <p class="discount"><span>now </span>750 Dkk,-</p>} :
+        ${product.discount ? `<p class="discount">Rabat <span>${product.discount}</span>%</p>` : ""}
         <a href="produkt.html?id=${product.id}">Read More</a>
       </article>`
     )

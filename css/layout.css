@@ -190,8 +190,22 @@ button {
 .produktliste main .small_product {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 10;
-  gap: inherit;
+  grid-row: span 8;
+  gap: 0.2rem;
+}
+
+.produktliste main .small_product a {
+  grid-row: 6;
+}
+
+.produktliste main .small_product .price,
+.discount {
+  font-size: 1.5rem;
+  color: black;
+}
+.produktliste main .small_product,
+.discount {
+  color: rgb(35, 0, 0);
 }
 
 @media screen and (min-width: 900px) {
