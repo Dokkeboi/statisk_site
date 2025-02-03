@@ -116,7 +116,7 @@ nav a:hover {
   background-color: rgb(140, 140, 140);
 }
 
-#productlist .subtle {
+.produktliste .subtle {
   color: rgb(195, 195, 195);
 }
 
@@ -178,7 +178,7 @@ button {
   margin: 1rem;
 }
 
-#productlist {
+.produktliste main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
@@ -187,15 +187,11 @@ button {
   margin: 0 auto;
 }
 
-#productlist a {
-  text-decoration: none;
-  color: rgb(31, 31, 31);
-  padding: 2em;
-  background-color: rgb(145, 145, 145);
-  border-radius: 5px;
-}
-#productlist a:hover {
-  background-color: rgb(165, 165, 165);
+.produktliste main .small_product {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 10;
+  gap: inherit;
 }
 
 @media screen and (min-width: 900px) {
@@ -235,28 +231,5 @@ button {
   .purchase_box {
     order: 2;
     transform: translate(-50px, 0);
-  }
-  #productlist {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .product_card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-
-  .product_card div,
-  h3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
   }
 }
