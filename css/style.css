@@ -1,5 +1,5 @@
 @media screen and (min-width: 900px) {
-  .category .categoryList a {
+  .category main a {
     background-image: url(../assets/category.svg);
     background-repeat: no-repeat;
     background-position: right;

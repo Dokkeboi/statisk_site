@@ -1,5 +1,13 @@
+const urlParams = new URLSearchParams(window.location.search);
+
+const myCategory = urlParams.get("category");
+
 const productliste = document.querySelector("main");
 let url = `https://kea-alt-del.dk/t7/api/products?limit=100`;
+
+if (myCategory) {
+  url = `https://kea-alt-del.dk/t7/api/products?category=${myCategory}`;
+}
 
 function showProducts(data) {
   const markup = data
