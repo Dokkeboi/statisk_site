@@ -1,5 +1,8 @@
-const id = 1528;
-const productUrl = `https://kea-alt-del.dk/t7/api/products/${id}`;
+const urlParams = new URLSearchParams(window.location.search);
+
+const myId = urlParams.get("id");
+
+const productUrl = `https://kea-alt-del.dk/t7/api/products/${myId}`;
 const article = document.querySelector("main");
 
 function getData() {

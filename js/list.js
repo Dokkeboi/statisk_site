@@ -18,10 +18,15 @@ function showProducts(data) {
           src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp"
           alt="produkt"
         />
+        <p class="saleLabel ${product.soldout && "soldout"}">Sold Out</p>
         <h3>${product.productdisplayname}</h3>
         <p class="subtle">${product.articletype} | ${product.brandname}</p>
         <p class="price">DKK ${product.price},-</p>
-        ${product.discount ? `<p class="discount">Rabat <span>${product.discount}</span>%</p>` : ""}
+        ${
+          product.discount
+            ? `<p class="discount">Rabat <span>${product.discount}</span>%</p>`
+            : ""
+        }
         <a href="produkt.html?id=${product.id}">Read More</a>
       </article>`
     )
